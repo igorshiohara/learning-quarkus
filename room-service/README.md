@@ -63,3 +63,6 @@ The other ones were generated automatically by the health-check lib.
 #Tracing
 Start the tracing going running the Docker image ./bin/start_jaeger.sh
 Go to http://localhost:16686/search to access Jaeger UI to check the tracing
+
+#Metrics
+Go to http://localhost:8080/metrics to check the metrics
