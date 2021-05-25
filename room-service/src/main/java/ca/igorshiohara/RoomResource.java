@@ -1,5 +1,7 @@
 package ca.igorshiohara;
 
+import org.jboss.logging.Logger;
+
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -13,9 +15,12 @@ public class RoomResource {
     @Inject
     RoomService roomService;
 
+    private final static Logger LOGGER = Logger.getLogger(RoomResource.class);
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Room> getAllRooms() {
+        LOGGER.info("Starting getAllRooms.");
         return roomService.getAllRooms();
     }
 
